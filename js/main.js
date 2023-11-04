@@ -10,7 +10,7 @@ async function apiRequest() {
       `https://spectrum-assembly-api.onrender.com/${name}`
     )
     const data = await response.json()
-
+    console.log(data)
     document.querySelector('h2').innerText = data.email
   } catch (error) {
     console.log(error)
