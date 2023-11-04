@@ -1,3 +1,3 @@
-const btn = document.querySelector(button)
-
-console.log('hello')
+document.querySelector('button').addEventListener('click', () => {
+  console.log('clicked')
+})
