@@ -1,9 +1,6 @@
-console.log('hi')
-
 document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest() {
-  console.log('clicked')
   const name = document.querySelector('input').value
   try {
     const response = await fetch(
