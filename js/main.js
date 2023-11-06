@@ -1,6 +1,7 @@
-document.querySelector('button').addEventListener('click', apiRequest)
+document.querySelector('form').addEventListener('submit', apiRequest)
 
-async function apiRequest() {
+async function apiRequest(event) {
+  event.preventDefault()
   const name = document.querySelector('input').value
   try {
     const response = await fetch(
@@ -11,4 +12,6 @@ async function apiRequest() {
   } catch (error) {
     console.log(error)
   }
+
+  document.querySelector('input').value = ''
 }
